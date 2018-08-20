@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">projectRealm</string>
+    <string name="countries">countries</string>
+    <string name="region">Регион</string>
+    <string name="capital">Столица</string>
+    <string name="laung">Язык</string>
+    <string name="name">name</string>
+</resources>
