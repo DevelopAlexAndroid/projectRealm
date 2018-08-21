@@ -34,6 +34,7 @@ public class presenterAllInfoCountriesActivity implements contractAllInfoCountri
     @Override
     public void onDestroy() {
         repository.closeDB();
+        actvityInfo = null;
     }
 
 

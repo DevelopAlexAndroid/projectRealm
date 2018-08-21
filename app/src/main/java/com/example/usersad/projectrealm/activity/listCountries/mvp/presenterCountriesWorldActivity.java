@@ -12,7 +12,6 @@ public class presenterCountriesWorldActivity implements contractCountriesWorldAc
 
     private contractCountriesWorldActivity.View activity;
     private repositoryCountriesWorldActivity repository = new repositoryCountriesWorldActivity();
-    private List<mDataCountries> countriesList;
 
     public presenterCountriesWorldActivity (contractCountriesWorldActivity.View viewActivity)
                                             {this.activity = viewActivity;}
@@ -28,6 +27,7 @@ public class presenterCountriesWorldActivity implements contractCountriesWorldAc
     @Override
     public void onDestroy() {
         repository.closeRepositoriy();
+        activity = null;
     }
 
     @Override
@@ -60,7 +60,6 @@ public class presenterCountriesWorldActivity implements contractCountriesWorldAc
 
     private void checkDataBase(){
         //if dataBase.Empty =>
-            // repository.callCountries(this);//comment
         repository.dataBaseCountries(this);
     }
 

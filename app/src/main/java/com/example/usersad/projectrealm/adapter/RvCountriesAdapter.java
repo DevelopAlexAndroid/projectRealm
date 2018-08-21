@@ -34,9 +34,8 @@ public class RvCountriesAdapter extends RecyclerView.Adapter<RvCountriesAdapter.
 
     private List<mDataCountries> countriesList;
     private onItemClickListener listener;
-    private Context context;
 
-    public RvCountriesAdapter (List<mDataCountries> countriesList, Context context){this.countriesList = countriesList;this.context = context;}
+    public RvCountriesAdapter (List<mDataCountries> countriesList){this.countriesList = countriesList;}
 
     @NonNull
     @Override
@@ -83,8 +82,6 @@ public class RvCountriesAdapter extends RecyclerView.Adapter<RvCountriesAdapter.
 
             requestBuilder = AppProjectRealm.getRequestBuilder();
         }
-
-
     }
 
     public void addDataCountries(List<mDataCountries> list){

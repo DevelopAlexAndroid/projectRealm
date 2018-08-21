@@ -25,8 +25,7 @@ public class CountriesWorldActivity extends AppCompatActivity implements contrac
 
     private List<mDataCountries> countriesList = new ArrayList<>();
     private presenterCountriesWorldActivity presentr = new presenterCountriesWorldActivity(this);
-    private RvCountriesAdapter rvCountriesAdapter = new RvCountriesAdapter(countriesList,this);
-    private RecyclerView recyclerViewCountries;
+    private RvCountriesAdapter rvCountriesAdapter = new RvCountriesAdapter(countriesList);
     private ProgressBar progressBar;
     private SwipeRefreshLayout swipeRefreshLayout;
 
@@ -38,7 +37,7 @@ public class CountriesWorldActivity extends AppCompatActivity implements contrac
 
         progressBar = findViewById(R.id.progressBar);
         swipeRefreshLayout = findViewById(R.id.swipeRefresh);
-        recyclerViewCountries = findViewById(R.id.recyclerViewCountries);
+        RecyclerView recyclerViewCountries = findViewById(R.id.recyclerViewCountries);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerViewCountries.setLayoutManager(layoutManager);
         rvCountriesAdapter.setItemClickListener(this);
