@@ -24,7 +24,7 @@ public class AllInfoCountriesActivity extends AppCompatActivity implements contr
     private int index;
     private ProgressBar progressBar;
     private presenterAllInfoCountriesActivity presenter = new presenterAllInfoCountriesActivity(this);
-    private TextView textName,textView,textView2,textView3,textView4,textView5,textView6;
+    private TextView textName,textRegion,textLaung,textCapital;
     private ImageView imageFlag;
     private GenericRequestBuilder requestBuilder;
 
@@ -36,12 +36,10 @@ public class AllInfoCountriesActivity extends AppCompatActivity implements contr
         progressBar = findViewById(R.id.progressBar);
         imageFlag = findViewById(R.id.imageFlag);
         textName = findViewById(R.id.textName);
-        textView = findViewById(R.id.textView);
-        textView2 = findViewById(R.id.textView2);
-        textView3 = findViewById(R.id.textView3);
-        textView4 = findViewById(R.id.textView4);
-        textView5 = findViewById(R.id.textView5);
-        textView6 = findViewById(R.id.textView6);
+        textRegion = findViewById(R.id.textRegion);
+        textLaung = findViewById(R.id.textLaung);
+        textCapital = findViewById(R.id.textCapital);
+
         requestBuilder = AppProjectRealm.getRequestBuilder();
 
         Intent intent = getIntent();
@@ -66,9 +64,9 @@ public class AllInfoCountriesActivity extends AppCompatActivity implements contr
         Log.i("mylog",mDataCountries.getName());
 
         textName.setText(mDataCountries.getName());
-        textView.setText(mDataCountries.getRegion());
-        textView3.setText(mDataCountries.getLanguages().get(0).getName());
-        textView4.setText(mDataCountries.getCapital());
+        textRegion.setText(mDataCountries.getRegion());
+        textLaung.setText(mDataCountries.getLanguages().get(0).getName());
+        textCapital.setText(mDataCountries.getCapital());
 
         Uri uri = Uri.parse(mDataCountries.getFlag());
         requestBuilder
@@ -76,7 +74,6 @@ public class AllInfoCountriesActivity extends AppCompatActivity implements contr
                 .load(uri)
                 .into(imageFlag);
 
-//view set text
     }
 
     @Override
