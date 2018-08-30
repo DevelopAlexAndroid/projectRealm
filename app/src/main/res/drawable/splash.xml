@@ -4,7 +4,7 @@
     <item android:drawable="@color/coloFon"/>
 
     <item>
-        <bitmap android:src="@drawable/e"
+        <bitmap android:src="@drawable/eart"
             android:gravity="center">
         </bitmap>
     </item>
